@@ -11,7 +11,7 @@ stages{
         steps{
 
             sh '''
-            aws s3 cp s3://mamuu/pandu/${BRANCH}/${BUILD}/hello-${BUILDNUM}.war .
+            aws s3 cp s3://mamuu/pandu/${BRANCH}/${BUILDNUM}/hello-${BUILDNUM}.war .
             ls -l 
             whoami
             IFS=',' read -ra storevalue <<< "${SERVERIP}"
