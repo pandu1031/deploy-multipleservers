@@ -1,6 +1,6 @@
 //Declarative pipeline
 pipeline{
-    agent any 
+    agent {label 'slave1'}
     parameters {
         string(name: 'SERVERIP', defaultValue: '', description: 'Enter server ip')
         string(name: 'BUILDNUM', defaultValue: '', description: 'Enter Build number')
